@@ -10,6 +10,34 @@
     p {
       font-size: 1.3em;
     }
+    
+    .handle {
+    width: 100%;
+    background-color: #e3f2fd;
+    text-align: left;
+    font-size: 1.3em;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: #000;
+    display: none;
+    }
+
+    @media screen and (max-width:540px) {
+      nav ul {
+      max-height: 0;
+      }
+      .showing {
+      max-height: 20em;
+      }
+      nav ul li {
+      box-sizing: border-box;
+      text-align: left;
+      }
+      .handle {
+      display: block;
+      }
+    }
   </style>
   
   <body>
@@ -17,13 +45,13 @@
       <a class="navbar-brand" href="index.html">Elections 2017</a>
       <ul class="nav navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
+          <a style="font-size:1.3em" class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="elections.html">Elections</a>
+          <a style="font-size:1.3em" class="nav-link" href="elections.html">Elections</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a style="font-size:1.3em" class="nav-link" href="about.html">About</a>
         </li>
       </ul>
     </nav>
@@ -31,7 +59,7 @@
     <div class="jumbotron" style="background-color: #e3f2fd">
       <div class="container">
         <h1 class="display-3">Dutch Elections 2017</h1>
-        <h2 class="lead">A website designed to guide potential voters in their search for a political party that suits them best</h2>
+        <h2 style="font-size:1.6em" class="lead">A website designed to guide potential voters in their search for a political party that suits them best</h2>
         <p><a id="elecbtn" href="elections.html" class="btn btn-lg">Learn more about the elections &raquo;</a></p>
       </div>
     </div>
