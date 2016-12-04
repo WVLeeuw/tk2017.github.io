@@ -4,6 +4,7 @@
     <title>Dutch Elections 2017</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css'/> 
   </head>
 
   <style>
@@ -53,78 +54,61 @@
     </div>
     
     <div class="container">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <p>This section shows the current distribution of seats in the Tweede Kamer. Click on the name of the party to show more info about that party.</p>
-        <button class="btn btn-primary" data-infoId="cdainfo">CDA</button>
-        <button class="btn btn-primary" data-infoId="cuinfo">ChristenUnie</button>
-        <button class="btn btn-primary" data-infoId="d66info">D66</button>
-        <button class="btn btn-primary" data-infoId="glinfo">GroenLinks</button>
-        <button class="btn btn-primary" data-infoId="pvdainfo">PvdA</button>
-        <button class="btn btn-primary" data-infoId="pvddinfo">PvdD</button>
-        <button class="btn btn-primary" data-infoId="pvvinfo">PVV</button>
-        <button class="btn btn-primary" data-infoId="sgpinfo">SGP</button>
-        <button class="btn btn-primary" data-infoId="spinfo">SP</button>
-        <button class="btn btn-primary" data-infoId="vvdinfo">VVD</button>
-        <button class="btn btn-primary" data-infoId="50plusinfo">50plus</button>
-        <button class="btn btn-primary" data-infoId="moreinfo">Remaining</button>
+        <div id="accordion">
+          <h3>CDA</h3>
+          <div>
+            <p>The CDA currently has 13 seats.</p>
+          </div>
+          <h3>ChristenUnie</h3>
+          <div>
+            <p>The ChristenUnie currently has 5 seats.</p>
+          </div>
+          <h3>D66</h3>
+          <div>
+            <p>D66 currently has 12 seats.</p>
+          </div>
+          <h3>GroenLinks</h3>
+          <div>
+            <p>GroenLinks currently has 4 seats.</p>
+          </div>
+          <h3>PvdA</h3>
+          <div>
+            <p>The PvdA currently has 35 seats.</p>
+          </div>
+          <h3>PvdD</h3>
+          <div>
+            <p>The PvdD currently has 2 seats.</p>
+          </div>
+          <h3>PVV</h3>
+          <div>
+            <p>The PVV currently has 12 seats.</p>
+          </div>
+          <h3>SGP</h3>
+          <div>
+            <p>The SGP currently has 3 seats.</p>
+          </div>
+          <h3>SP</h3>
+          <div>
+            <p>The SP currently has 15 seats.</p>
+          </div>
+          <h3>VVD</h3>
+          <div>
+            <p>The VVD currently has 40 seats.</p>
+          </div>
+          <h3>50plus</h3>
+          <div>
+            <p>50plus currently has 1 seat.</p>
+          </div>
+          <h3>Remainder</h3>
+          <div>
+            <p>There are 8 remaining seats. These are distributed among members of the Tweede Kamer that have left their party but still wish to be a member.</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="container">
-
-      <div id="cdainfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The CDA currently has 13 seats.</p>
-      </div>
-
-      <div id="cuinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The ChristenUnie currently has 5 seats.</p>
-      </div>
-
-      <div id="d66info" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>D66 currently has 12 seats.</p>
-      </div>
-
-      <div id="glinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>GroenLinks currently has 4 seats.</p>
-      </div>
-
-      <div id="pvdainfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The PvdA currently has 35 seats.</p>
-      </div>
-
-      <div id="pvddinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The PvdD currently has 2 seats.</p>
-      </div>
-
-      <div id="pvvinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The PVV currently has 12 seats.</p>
-      </div>
-
-      <div id="sgpinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The SGP currently has 3 seats.</p>
-      </div>
-
-      <div id="spinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>The SP currently has 15 seats.</p>
-      </div>
-
-      <div id="vvdinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>VVD currently has 40 seats.</p>
-      </div>
-
-      <div id="50plusinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>50plus currently has 1 seat.</p>
-      </div>
-
-      <div id="moreinfo" style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <p>There are 8 remaining seats. These are distributed among members of the Tweede Kamer that have left their party but still wish to be a member.</p>
-      </div>
-      
-    </div>
   </body>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" src="elections.js"></script>
 
 </html>
